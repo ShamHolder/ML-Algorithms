@@ -52,13 +52,13 @@ class NaiveBayes():
                 probabilities[classValue] *= calcGaussianProbability(row[i], mean, stddev)
         return probabilities
     
-def mean(data):
-    return sum(data)/float(len(data))
+    def mean(self, data):
+        return sum(data)/float(len(data))
 
-def stdDev(data):
-    avg = mean(data)
-    variance = sum([(x-avg)**2 for x in data]) / float(len(data)-1)
-    return sqrt(variance)
+    def stdDev(self, data):
+        avg = mean(data)
+        variance = sum([(x-avg)**2 for x in data]) / float(len(data)-1)
+        return sqrt(variance)
 
-def calcGaussianProbability(x, mean, stddev):
-    return (1 / (sqrt(2*pi) * stddev)) * exp(-((x-mean)**2 / (2 * stddev**2)))
+    def calcGaussianProbability(self, x, mean, stddev):
+        return (1 / (sqrt(2*pi) * stddev)) * exp(-((x-mean)**2 / (2 * stddev**2)))

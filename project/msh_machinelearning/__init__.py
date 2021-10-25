@@ -1,1 +1,1 @@
-__all__=['linearmodel']
+__all__=['linearmodel','bayes','perceptron']

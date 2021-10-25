@@ -1,1 +1,1 @@
-__all__=['LogisticRegression']
+__all__=['linearmodel']
